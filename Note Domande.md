@@ -74,7 +74,7 @@ presentano uno shift-register di dimensione variabile cosi in caso di de-sincron
 - ### certificate revocation list
 	- contengono le informazioni relative alla validita dei certificati detenuti dalla CA
 	- crescono in lunghezza e diventano un collo di bottiglia da utilizzare, richiedendo sempre piu banda per la trasmissione in rete e potenza computazionale da parte del client per l'ananlisi
-	- partizionare la CRL in modo da fornire solo una parte della CRL quando richiesta dal client
+	- partizionare la CRL in modo da fornire solo una parte della CRL quando richiesta dal client, la crl viene partizionata nei vari nodi di un sistema a directory, quando un certificato viene revocato la crl conosce la entry dove è contenuto il certificato perche ne viene salvato l'indirizzo nel certificato stesso
 	- eliminare le voci che fanno riferimento a certificati scaduti
 	- gestire le CRL a **update incrementali detti delta**, dove si aggiornano i client solo con le differenze della CRL dal precedente aggiornamento in modo da ottimizzare il consumo di banda
 - ## ottenimento di un certificato approvato da CA
@@ -98,4 +98,65 @@ presentano uno shift-register di dimensione variabile cosi in caso di de-sincron
 ### meccanismo OCSP
 - modello **pull online**, protocollo client-server che prevede la richiesta alla CA da parte degli utenti nel momento in cui è necessario verificare un certificato
 - necessario essere online
+## protocollo diffie-hellmanù
+- ### anonimo
+	- non vengono autenticati gli enti che prendono parte alla conversazione
+	- scambio di un numero grande p sul canale insicuro
+	- definizione di g generatore di p
+		- `modp, g^2modp, …, g^pmodp restituisce tutti numeri distinti e compresi nell’intervallo [1, p-1]`
+	- g e p possono essere scambiati nel canale insicuro
+	- i due utenti generano due numeri random `Xa e Xb` contenuti in `1, p-1`
+	- entrambi eseguono l'esponenziale modulare ` A calcolerà g^Xa modp = Ya e B calcolerà g^Xb modp = Yb`
+	- vengono scambiati i valori Ya e Yb
+	- A esegue `Yb^(Xamodp)` e B esegue `Ya^(Xbmodp)`
+	- questo ultimo valore calcolato sara la chiave K di sessione che risulta uguale per entrambi 
+	- nonostante i parametri scambiati sul canale insicuro questo non compromette la sicurezza del protocollo in quanto l'attaccante dovrebbe risalire a Xa o Xb che non puo ottenere da Ya o Yb a meno di non riuscire a compiere il calcolo del logaritmo discreto che è computazionalmente difficile
+	- questo protocollo non fornisce garanzie sull' identita di chi genera Y
+- ### variante fixed
+	- il valore Y viene incapsulato in un certificato insieme a p e g
+	- presente una certification autority
+	- il valore Y non può esere cambiato
+	- se qualcuno dice di essere chi non è le parti non accordano lo stesso segreto
+- ### variante ephemeral
+	- i due client generano a ogni sessione degli X diversi partendo dagli stessi p e g e di conseguenza anche degli Y che saranno firmati e certificati  anche in questo caso non si ha autenticazione delle parti
+- ### autenticazione 
+	- introdurre protocollo di sfida risposta in cui la sfida è la master secret concordata 
+## cifrario RSA
+- cifrario asimmetrico basato sul problema della fattorizzazione e di estrazione della radice iesima da un numero
+- necessita la frammentazione del messaggio in input perche si basa su operazioni di modulo, inoltre non devono esserci collisioni tra messaggi
+- l'algoritmo RSA è deterministico quindi necessario rendere l'input aleatorio
+- nel caso un messaggio sia molto maggiore della lunghezza della chiave è necessario frammenteare il messaggio in pezzi di dimensione inferiore alla dimensione della chiave per evitare collisioni
+- nel caso contrario necessario aggiungere padding
+- ### proprieta moltiplicativa 
+- si ha che per RSA `E(m1*m2)=E(m1*)*E(m2)` quindi è possibile farsi autenticare un messaggio facendosi autenticare il prodotto di quel messaggio con un mascheratore R e questo poi potrà essere usato come autenticatore per M
+## PGP 
+- modello completamente decentralizzato 
+- sono presenti due portachiavi uno per le propie chiavi private e un altro per le chiavi pubbliche delle quali si ha fiducia
+- campo owner trust: fiducia che si pone in quella determinata chiave
+- signature memorizza l'eventuale certificato
+- owner trust della chiave pubblica che ha firmato il certificato
+- Key Legitimacy viene calcolato in base hai valori precedenti e contiene il livello di autenticita di una certa chiave
+## compressione post firma 
+- casistica applicata alla firma di mail tramite pgp questo per evitare di dover ricomprimere il messaggio per ricontrollare la firma che ha distanza di tempo potrebbe vedersi alterato l'algroritmo di compressione utilizzato o costringerebbe a inserire nel messaggio anche le informazioni dell'algoritmo di compressione utilizzato
+## identificazione passiva
+- viene utilizzato un segreto condiviso dalle due parti che non varia nel tempo (password)
+## identificazione attiva
+- viene utilizzato un segreto condiviso dalle due  parti che varia in ogni sessione  (password)
+![[attachments/Pasted image 20230712163855.png]]
+attacco vulnerabile a reflection e interleaving per via della simmetria dei messaggi scambiati (attaccante apre due sessioni una con  A e una con B e risponde a A con i messaggi di B e viceversa)
+(attaccante apre due sessioni con A e nella seconda sessione invia ad A la stessa sfida che A ha lanciato nella prima sessione )
+
+## IPSEC 
+- ## SECURITY ASSOCIATION
+	- connessione unidirezionale tra due interlocutori
+- ### SECURITY POLICY DATABASE 
+	- politiche di controllo del traffico in entrata e uscita 
+- ### SECURITY ASSOCIATION DATABASE
+	- database delle SA strutturato a entry
+## BLOCKCHAIN 
+- struttura dati distribuita decentralizzata a registro only append gestita ad albero
+- ogni nodo che partecipa alla blockchain possiede una copia dell registro e ogni nodo puo fare modifiche
+- le modifiche sono considerate valide se accettate da tutti i membri della blockchain gestiti tramite opportuni protocolli di consenso 
+- l'immutabilità dei dati viene garantita da primitive crittografiche forti 
+- dati aggiunti sotto forma di blocchi che possiedono un hash che identifica il blocco stesso e un hash che identifica il blocco precedente nella catena 
 - 
