@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"0398ad276239d31a","x":-80,"y":-580,"width":357,"height":41,"type":"text","text":"# [TRASFORMAZIONE E](TRASFORMAZIONI.md#TRASFORMAZIONE%20$E$)"},
+		{"id":"bcd9e7ad996cc307","x":400,"y":-580,"width":359,"height":41,"type":"text","text":"# [TRASFORMAZIONE S](TRASFORMAZIONI.md#TRASFORMAZIONE%20$S$)"},
+		{"id":"f724489844bb21f3","x":860,"y":-580,"width":361,"height":41,"type":"text","text":"# [TRASFORMAZIONE H](TRASFORMAZIONI.md#TRASFORMAZIONE%20$H$)"},
+		{"id":"e970684affc33e18","x":380,"y":-400,"width":400,"height":400,"type":"file","file":"pages/TRASFORMAZIONI.md"},
+		{"id":"c0579bf12f88bccf","x":-360,"y":-400,"width":400,"height":400,"type":"file","file":"pages/CHIAVI.md"}
+	],
+	"edges":[
+		{"id":"0e1e0bd3d9ee0f7e","fromNode":"e970684affc33e18","fromSide":"top","toNode":"bcd9e7ad996cc307","toSide":"bottom"},
+		{"id":"052d9cb32b7add60","fromNode":"e970684affc33e18","fromSide":"top","toNode":"0398ad276239d31a","toSide":"bottom"},
+		{"id":"d447fcb880fdc1c1","fromNode":"e970684affc33e18","fromSide":"top","toNode":"f724489844bb21f3","toSide":"bottom"},
+		{"id":"5650a11316c2b749","fromNode":"e970684affc33e18","fromSide":"left","toNode":"c0579bf12f88bccf","toSide":"right","label":"PER RENDERLE\nSICURE"}
+	]
+}
