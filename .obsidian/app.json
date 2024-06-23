@@ -1,12 +1,13 @@
 {
+  "promptDelete": false,
   "trashOption": "none",
-  "newLinkFormat": "absolute",
-  "attachmentFolderPath": "attachments",
-  "showLineNumber": true,
-  "spellcheckLanguages": [
-    "it",
-    "en"
-  ],
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "pages",
+  "useMarkdownLinks": true,
   "showUnsupportedFiles": true,
-  "promptDelete": false
+  "attachmentFolderPath": "assets",
+  "showInlineTitle": false,
+  "vimMode": true,
+  "showLineNumber": true
 }

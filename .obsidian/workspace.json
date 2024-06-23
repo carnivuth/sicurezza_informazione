@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "207a9754f1cd4151",
+    "id": "470c55f793dc56b4",
     "type": "split",
     "children": [
       {
-        "id": "000349099a96e024",
+        "id": "db2957fad52f1550",
         "type": "tabs",
         "children": [
           {
-            "id": "d02c315755d97a0c",
+            "id": "23c2fc70f05b2de3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "9526a75ea251b84d",
+    "id": "5fb06df6c47a617c",
     "type": "split",
     "children": [
       {
-        "id": "6e3839aa9ca419aa",
+        "id": "9a9b1201c9118bda",
         "type": "tabs",
         "children": [
           {
-            "id": "302a282a572e90ce",
+            "id": "e4bfa12482c34d09",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "6da9e4311d09852d",
+            "id": "63c345c4deca4881",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "bde65885225d995f",
+            "id": "13a929bc793f1fc6",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,18 +69,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5
+    "width": 300
   },
   "right": {
-    "id": "b0d210174b18fb74",
+    "id": "dac75393471bb836",
     "type": "split",
     "children": [
       {
-        "id": "7ee9ac72d2b90af8",
+        "id": "79de11fec906112a",
         "type": "tabs",
         "children": [
           {
-            "id": "6bc21c78e9c48d25",
+            "id": "013e8961732a2b6a",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -97,7 +97,7 @@
             }
           },
           {
-            "id": "fe5633adda78a8fd",
+            "id": "d1191ecf40b48cd5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -109,7 +109,7 @@
             }
           },
           {
-            "id": "1ad01711609219c0",
+            "id": "0d2d41beed5a0b99",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,7 +120,7 @@
             }
           },
           {
-            "id": "741ec45a1f6c88d0",
+            "id": "2488070d8f877381",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -143,24 +143,14 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d02c315755d97a0c",
+  "active": "e4bfa12482c34d09",
   "lastOpenFiles": [
-    "Pasted image 20230711133728.png",
-    "attachments/Pasted image 20230711153430.png",
-    "attachments/Pasted image 20230711134012.png",
-    "attachments/Pasted image 20230711133943.png",
-    "attachments/Pasted image 20230711133728.png",
-    "attachments/Pasted image 20230711133713.png",
-    "Pasted image 20230711133713.png",
-    "Note Domande.md",
-    "Pasted image 20230711161904.png",
-    "attachments/Pasted image 20230711161923.png",
-    "attachments",
-    "Untitled.canvas",
-    "Pasted image 20230711153430.png",
-    "Pasted image 20230711161719.png"
+    "readme.md"
   ]
 }
