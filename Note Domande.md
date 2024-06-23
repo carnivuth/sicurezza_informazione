@@ -51,7 +51,7 @@ presentano uno shift-register di dimensione variabile cosi in caso di de-sincron
 - strategia per prevenire questo attacco è concatenare il segreto s dopo il messaggio nella procedura di firma `h(m||s)`
 
 ## SISTEMA KDC
-![[attachments/Pasted image 20230711153430.png]]
+![[Pasted image 20230711153430.png]]
 
 
 
@@ -142,7 +142,7 @@ presentano uno shift-register di dimensione variabile cosi in caso di de-sincron
 - viene utilizzato un segreto condiviso dalle due parti che non varia nel tempo (password)
 ## identificazione attiva
 - viene utilizzato un segreto condiviso dalle due  parti che varia in ogni sessione  (password)
-![[attachments/Pasted image 20230712163855.png]]
+![[Pasted image 20230712163855.png]]
 attacco vulnerabile a reflection e interleaving per via della simmetria dei messaggi scambiati (attaccante apre due sessioni una con  A e una con B e risponde a A con i messaggi di B e viceversa)
 (attaccante apre due sessioni con A e nella seconda sessione invia ad A la stessa sfida che A ha lanciato nella prima sessione )
 
