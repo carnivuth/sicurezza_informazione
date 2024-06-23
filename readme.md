@@ -1,4 +1,4 @@
-# COMPUTER VISION
+# SICUREZZA DELL' INFORMAZIONE
 
 Note personali sul corso di sicurezza dell'informazione tenuto dalla professoressa Montanari Rebecca
 
