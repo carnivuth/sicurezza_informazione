@@ -1,15 +1,23 @@
 {
 	"nodes":[
-		{"id":"0398ad276239d31a","x":-80,"y":-580,"width":357,"height":41,"type":"text","text":"# [TRASFORMAZIONE E](TRASFORMAZIONI.md#TRASFORMAZIONE%20$E$)"},
-		{"id":"bcd9e7ad996cc307","x":400,"y":-580,"width":359,"height":41,"type":"text","text":"# [TRASFORMAZIONE S](TRASFORMAZIONI.md#TRASFORMAZIONE%20$S$)"},
-		{"id":"f724489844bb21f3","x":860,"y":-580,"width":361,"height":41,"type":"text","text":"# [TRASFORMAZIONE H](TRASFORMAZIONI.md#TRASFORMAZIONE%20$H$)"},
-		{"id":"e970684affc33e18","x":380,"y":-400,"width":400,"height":400,"type":"file","file":"pages/TRASFORMAZIONI.md"},
-		{"id":"c0579bf12f88bccf","x":-360,"y":-400,"width":400,"height":400,"type":"file","file":"pages/CHIAVI.md"}
+		{"id":"0398ad276239d31a","type":"text","text":"# [TRASFORMAZIONE E](TRASFORMAZIONI.md#TRASFORMAZIONE%20$E$)","x":-80,"y":-580,"width":357,"height":41},
+		{"id":"bcd9e7ad996cc307","type":"text","text":"# [TRASFORMAZIONE S](TRASFORMAZIONI.md#TRASFORMAZIONE%20$S$)","x":400,"y":-580,"width":359,"height":41},
+		{"id":"f724489844bb21f3","type":"text","text":"# [TRASFORMAZIONE H](TRASFORMAZIONI.md#TRASFORMAZIONE%20$H$)","x":860,"y":-580,"width":361,"height":41},
+		{"id":"e970684affc33e18","type":"file","file":"pages/TRASFORMAZIONI.md","x":380,"y":-400,"width":400,"height":400},
+		{"id":"c0579bf12f88bccf","type":"file","file":"pages/CHIAVI.md","x":-360,"y":-400,"width":400,"height":400},
+		{"id":"464b7a2339583d9b","type":"file","file":"pages/FUNZIONI_HASH.md","x":841,"y":-1200,"width":400,"height":400},
+		{"id":"873b3aef63d3144a","type":"file","file":"pages/CIFRARI.md","x":-101,"y":-1240,"width":400,"height":400},
+		{"id":"f4f76c64d71adf79","type":"file","file":"pages/PROTOCOLLO_WEP.md","x":-101,"y":-1800,"width":400,"height":400},
+		{"id":"faa8123452317d3a","x":-800,"y":-1240,"width":400,"height":400,"type":"file","file":"pages/MODALITA_CIFRATURA.md"}
 	],
 	"edges":[
 		{"id":"0e1e0bd3d9ee0f7e","fromNode":"e970684affc33e18","fromSide":"top","toNode":"bcd9e7ad996cc307","toSide":"bottom"},
 		{"id":"052d9cb32b7add60","fromNode":"e970684affc33e18","fromSide":"top","toNode":"0398ad276239d31a","toSide":"bottom"},
 		{"id":"d447fcb880fdc1c1","fromNode":"e970684affc33e18","fromSide":"top","toNode":"f724489844bb21f3","toSide":"bottom"},
-		{"id":"5650a11316c2b749","fromNode":"e970684affc33e18","fromSide":"left","toNode":"c0579bf12f88bccf","toSide":"right","label":"PER RENDERLE\nSICURE"}
+		{"id":"5650a11316c2b749","fromNode":"e970684affc33e18","fromSide":"left","toNode":"c0579bf12f88bccf","toSide":"right","label":"PER RENDERLE\nSICURE"},
+		{"id":"de4df1893999dea5","fromNode":"f724489844bb21f3","fromSide":"top","toNode":"464b7a2339583d9b","toSide":"bottom"},
+		{"id":"874892c061ba8102","fromNode":"0398ad276239d31a","fromSide":"top","toNode":"873b3aef63d3144a","toSide":"bottom","label":"UTILIZZATI PER\nLA CIFRATURA"},
+		{"id":"9ca64b431ed81dc7","fromNode":"873b3aef63d3144a","fromSide":"top","toNode":"f4f76c64d71adf79","toSide":"bottom","label":"PROTOCOLLO CON\nCIFRARIO INSICURO"},
+		{"id":"fc52801e5ac9b47c","fromNode":"0398ad276239d31a","fromSide":"top","toNode":"faa8123452317d3a","toSide":"bottom","label":"MODALITA CON\nCUI OTTENERE IL\nCIFRATO"}
 	]
 }
