@@ -2,8 +2,8 @@
 
 Nei [cifrari simmertrici](CIFRARI.md#CIFRARI%20SIMMETRICI) e fondamentale stabilire come distribuire la chiave agli interessati alla comunicazione, ci sono due modelli di interazione principali
 
-- scambio su canale sicuro
-- segreto concordato per mezzo di internet
+- scambio su canale sicuro ([master key](#MASTER%20KEY), [key distribution center](#KEY%20DISTRIBUTION%20CENTER%20(KDC)))
+- segreto concordato per mezzo di internet ([diffie_hellman](DIFFIE_HELLMAN.md),[cifrari_asimmetrici](CIFRARI_ASIMMETRICI.md))
 
 ## MASTER KEY
 
@@ -84,44 +84,10 @@ Le soluzioni con un KDC hanno delle problematiche intrinseche:
 
 Per sopperire al problema del collo di bottiglia si puo sfruttare il principio di localita dove un KDC si occupa di una porzione ristretta della rete (*e.g. DNS*) e stabilire relazioni di fiducia tra i vari KDC
 
-## ALGORITMO DIFFIE-HELLMAN (VERSIONE ANONIMA)
-
-Non prevede alcun accordo precedente, attraverso un protocollo crittografico, ogni coppia di utenti è in grado tramite l’esecuzione del protocollo di concordare un segreto (*basato sul calcolo di logaritmi discreti*)
-
-```mermaid
-sequenceDiagram
-participant alice
-participant bob
-note over alice: a,g,p
-note over alice: A = g^a mod p
-alice ->> bob: A,g,p
-note over bob: b
-note over bob: B = g^b mod p
-note over bob: K = A^b mod p
-bob ->> alice: B
-note over alice: K = B^a mod p
-```
-
-Le due parti arrivano a concordare la stessa chiave sfruttando le proprietà dell' esponenziazione modulare dato che 
-
-$$
-\displaylines{
-K \space calcolata \space da \space B = \\
-A^b\mod{p} =(g^a\mod{p})^b\mod{p} = \\
-(g^b\mod{p})^a \mod{p} = B^a\mod{p} = \\
-K \space calcolata \space da \space A  \\
-}
-$$
-
-Se l'attaccante ascoltasse la conversazione non sarebbe a conoscenza dei parametri $a,b$ necessari per risalire alla chiave di cifratura, con i parametri noti l'attaccante dovrebbe risolvere il problema noto della teoria dei numeri [calcolo del logaritmo discreto](PROBLEMI_DIFFICILI.md#CALCOLO%20DEL%20LOGARITMO%20DISCRETO)
-	
-### DH PROBLEMATICHE
-
-L'algoritmo cosi presentato mostra problematiche legate all'autenticazione del richiedente, la destinazione sa che sta concordando una chiave con chi gli ha inviato i parametri $g,A,p$ ma non e in grado di dimostrarne l'autenticita
 
 ### **Schema KDC alternativo**
 
-Questo è un esempio di protocollo senza vulnerabilità.
+	Questo è un esempio di protocollo senza vulnerabilità.
 
 Come nell’altro caso c’è un DoS: se attacco A devo riniziare la comunicazione, se attacco B la procedura non termina.
 
