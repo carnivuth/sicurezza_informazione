@@ -1,13 +1,4 @@
-# CIFRARI
-
-I cifrari sono sistemi che svolgono le seguenti 2 funzionalita:
-
-- trasformazione del testo in qualcosa di incomprensibile se non ai destinatari
-- trasformazione inversa
-
-I cifrari usati oggi giorno si dicono **computazionalmente sicuri** che vuol dire che la trasformazione inversa e possibile in tempo polinomiale per chi e in possesso della chiave ed e **sempre possibile ma in tempo esponenziale per chi non e in possesso della chiave**
-
-## CIFRARI SIMMETRICI
+# CIFRARI SIMMETRICI
 
 Cifrari che si basano su algoritmi simmetrici (*e.g. [chiavi simmetriche](CHIAVI.md#CHIAVI%20SIMMETRICHE)*). Nella costruzione dei cifrari simmetrici si seguono due principi fondamentali:
 
@@ -136,7 +127,7 @@ end
 CIFRATURA <--sincronismo --> DECIFRATURA
 ```
 
-### CONFRONTO
+## CONFRONTO
 
 Per entrambi i cifrari non e possibile un attacco passivo, a patto di utilizzare PRNG sicuri, tuttavia sono vulnerabili ad attacchi attivi, 
 
@@ -147,11 +138,7 @@ Sono però vulnerabili ad attacchi attivi. Se il flusso dei dati viene alterato 
 | **CIFRARIO A FLUSSO SINCRONO**  | perdita del sincronismo, comunicazione interrotta                                              | perdita di sincronismo, comunicazione interrotta                                               | il bit modificato non viene decifrato ma la comunicazione procede                              |
 | **CIFRARIO AUTOSINCRONIZZANTE** | la decifrazione e temporaneamente interrotta fintanto che il bit non esce dallo shift register | la decifrazione e temporaneamente interrotta fintanto che il bit non esce dallo shift register | la decifrazione e temporaneamente interrotta fintanto che il bit non esce dallo shift register |
 
-### LIMITE DEI CIFRARI AUTO SINCRONIZZANTI
-
-Per costruire dei cifrari a flusso auto sincronizzanti occorre utilizzare dei registri a scorrimento progettati secondo determinate proprietà che garantiscono poi la robustezza. Questi registri sono molti costosi, motivo per il quale vengono più utilizzati i cifrari a flusso sincrono.
-
-### RIUTILIZZO DELLE CHIAVI
+## RIUTILIZZO DELLE CHIAVI
 
 La sicurezza di questi cifrari dipende dalla sicurezza delle chiavi utilizzate, in questo caso, visto che viene effettuata l'operazione di xor si ha che:
 
@@ -233,3 +220,4 @@ Una delle prime implementazioni della rete di Festel e DES, prevede 16 iterazion
 ### AES
 
 Algoritmo di cifratura a blocchi standard del settore, utilizza operazioni di sostituzione e trasposizione ma non si rifa alla rete di festel
+

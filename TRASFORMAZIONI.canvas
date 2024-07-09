@@ -6,9 +6,9 @@
 		{"id":"e970684affc33e18","type":"file","file":"pages/TRASFORMAZIONI.md","x":380,"y":-400,"width":400,"height":400},
 		{"id":"c0579bf12f88bccf","type":"file","file":"pages/CHIAVI.md","x":-360,"y":-400,"width":400,"height":400},
 		{"id":"464b7a2339583d9b","type":"file","file":"pages/FUNZIONI_HASH.md","x":841,"y":-1200,"width":400,"height":400},
-		{"id":"873b3aef63d3144a","type":"file","file":"pages/CIFRARI.md","x":-101,"y":-1240,"width":400,"height":400},
+		{"id":"873b3aef63d3144a","type":"file","file":"pages/CIFRARI_SIMMETRICI.md","x":-101,"y":-1240,"width":400,"height":400},
 		{"id":"f4f76c64d71adf79","type":"file","file":"pages/PROTOCOLLO_WEP.md","x":-101,"y":-1800,"width":400,"height":400},
-		{"id":"faa8123452317d3a","x":-800,"y":-1240,"width":400,"height":400,"type":"file","file":"pages/MODALITA_CIFRATURA.md"}
+		{"id":"faa8123452317d3a","type":"file","file":"pages/MODALITA_CIFRATURA.md","x":-800,"y":-1240,"width":400,"height":400}
 	],
 	"edges":[
 		{"id":"0e1e0bd3d9ee0f7e","fromNode":"e970684affc33e18","fromSide":"top","toNode":"bcd9e7ad996cc307","toSide":"bottom"},

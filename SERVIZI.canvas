@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"bcb9be94e0ca2bc0","x":-160,"y":-140,"width":336,"height":123,"type":"text","text":"# SERVIZI PER LA RISERVATEZZA E L'AUTENTICAZOINE"},
+		{"id":"755c3610cc4ecb20","x":520,"y":600,"width":400,"height":400,"type":"file","file":"pages/KERBEROS.md"},
+		{"id":"a8bd9ca78efb4685","x":-880,"y":600,"width":400,"height":400,"type":"file","file":"pages/PGP.md"},
+		{"id":"4649127966cb12ff","x":-880,"y":-278,"width":400,"height":400,"type":"file","file":"pages/IPSEC.md"},
+		{"id":"937173fea4ddff13","x":520,"y":-278,"width":400,"height":400,"type":"file","file":"pages/SSL.md"}
+	],
+	"edges":[
+		{"id":"e497e32867cc3349","fromNode":"bcb9be94e0ca2bc0","fromSide":"left","toNode":"4649127966cb12ff","toSide":"right","label":"SERVIZIO\nA LIVELLO 3"},
+		{"id":"2f9cd02118d35f4f","fromNode":"bcb9be94e0ca2bc0","fromSide":"right","toNode":"937173fea4ddff13","toSide":"left","label":"SERVIZIO \nA LIVELLO 4"},
+		{"id":"9527cdeaae791b8c","fromNode":"bcb9be94e0ca2bc0","fromSide":"bottom","toNode":"755c3610cc4ecb20","toSide":"top","label":"SERVIZIO APPLICATIVO\nSERVICE ORIENTED"},
+		{"id":"3b3e78283d8381ac","fromNode":"bcb9be94e0ca2bc0","fromSide":"bottom","toNode":"a8bd9ca78efb4685","toSide":"top","label":"SERVIZIO APPLICATIVO\nFILE ORIENTED"}
+	]
+}

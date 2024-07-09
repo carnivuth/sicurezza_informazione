@@ -1,6 +1,6 @@
 # MECCANISMO DI DISTRIBUZIONE DELLE CHIAVI
 
-Nei [cifrari simmertrici](CIFRARI.md#CIFRARI%20SIMMETRICI) e fondamentale stabilire come distribuire la chiave agli interessati alla comunicazione, ci sono due modelli di interazione principali
+Nei [cifrari simmertrici](CIFRARI_SIMMETRICI.md#CIFRARI%20SIMMETRICI) e fondamentale stabilire come distribuire la chiave agli interessati alla comunicazione, ci sono due modelli di interazione principali
 
 - scambio su canale sicuro ([master key](#MASTER%20KEY), [key distribution center](#KEY%20DISTRIBUTION%20CENTER%20(KDC)))
 - segreto concordato per mezzo di internet ([diffie_hellman](DIFFIE_HELLMAN.md),[cifrari_asimmetrici](CIFRARI_ASIMMETRICI.md))

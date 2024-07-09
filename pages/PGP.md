@@ -1,6 +1,6 @@
 # PRETTY GOOD PRIVACY (PGP)
 
-Protocollo di sicurezza pensato per scambiare documenti in modo sicuro, compatibile con differenti sistemi di messaggistica email, fornisce anche servizi di autenticazione per mezzo di meccanismi di [firma digitale](PROTOCOLLI.md#FIRMA%20DIGITALE).
+Protocollo di sicurezza pensato per scambiare documenti in modo sicuro (*email e file storage*), compatibile con differenti sistemi di messaggistica email, fornisce anche servizi di autenticazione per mezzo di meccanismi di [firma digitale](PROTOCOLLI.md#FIRMA%20DIGITALE).
 
 ## RISERVATEZZA
 

@@ -4,7 +4,7 @@ Esistono diverse modalità per l'implementazione di cifrari a blocchi:
 
 ## ELECTRONIC CODE BOOK (ECB)
 
-Modalità standard di implementazione dei cifrari a blocchi [CIFRARI A BLOCCHI](CIFRARI.md#CIFRARI%20A%20BLOCCHI) questa si presenta a diverse vulnerabilità tra cui:
+Modalità standard di implementazione dei cifrari a blocchi [CIFRARI A BLOCCHI](CIFRARI_SIMMETRICI.md#CIFRARI%20A%20BLOCCHI) questa si presenta a diverse vulnerabilità tra cui:
 
 - blocchi identici di testo in chiaro producono blocchi identici di testo cifrato
 - la cifratura ECB risulta malleabile, e possibile modificare il cifrato per ottenere un decifrato voluto dall'attaccante
@@ -74,7 +74,7 @@ CBC fa utilizzo di un vettore di inizializzazione per impedire la ripetizione di
 
 ## CIPHER FEEDBACK (CFB) 
 
-Modalità di cifratura che si rifa ai [cifrari a flusso autosincronizzanti](CIFRARI.md#CIFRARI%20A%20FLUSSO) con l'utilizzo di un vettore $IV$  molto adatta alla comunicazione di flussi di dati.
+Modalità di cifratura che si rifa ai [cifrari a flusso autosincronizzanti](CIFRARI_SIMMETRICI.md#CIFRARI%20A%20FLUSSO) con l'utilizzo di un vettore $IV$  molto adatta alla comunicazione di flussi di dati.
 Il flusso di chiave viene ottenuto per mezzo di uno shift register (inizializzato per mezzo di $IV$) che viene cifrato con la chiave concordata
 
 ## OUTPUT FEEDBACK (OFB)
