@@ -1,3 +1,9 @@
+---
+id: RANDOM_NUMBER_GENERATOR
+aliases: []
+tags: []
+---
+
 # RANDOM NUMBER GENERATOR (RNG)
 
 Per poter creare chiavi sicure e non deducibili e necessario un componente in grado di generare numeri casuali, l'output di questo componente deve avere le seguenti proprieta:
@@ -56,11 +62,11 @@ Per garantire l'imprevedibilità il seguente test deve essere effettuato:
 
 ### GARANTIRE L' INDEDUCIBILITÀ
 
-Per garantire l' indeducibilità e necessario che le funzioni $F$ e/o $G$ siano [funzioni one-way](TRASFORMAZIONI.md#COSA%20SERVE%20PER%20RENDERE%20LE%20TRASFORMAZIONI%20SICURE?) queste funzioni possono essere definite con algoritmi simmetrici (*e.g. alte performance*) o asimmetrici (*e.g. unidirezionalità dimostrabile*) 
+Per garantire l' indeducibilità e necessario che le funzioni $F$ e/o $G$ siano [funzioni one-way](TRASFORMAZIONI.md#COSA%20SERVE%20PER%20RENDERE%20LE%20TRASFORMAZIONI%20SICURE?) queste funzioni possono essere definite con algoritmi simmetrici (*e.g. alte performance*) o asimmetrici (*e.g. unidirezionalità dimostrabile*)
 
 ### LINEE GUIDA
 
-Per poter costruire un CSPRNG esistono delle linee guida definite da un RFC che prevedono la combinazione di un [PRNG](#PSEUDO%20RANDOM%20NUMBER%20GENERATOR%20(PRNG)) con un seme generato da un [TRNG](#TRUE%20RANDOM%20NUMBER%20GENERATOR%20(TRNG)) 
+Per poter costruire un CSPRNG esistono delle linee guida definite da un RFC che prevedono la combinazione di un [PRNG](#PSEUDO%20RANDOM%20NUMBER%20GENERATOR%20(PRNG)) con un seme generato da un [TRNG](#TRUE%20RANDOM%20NUMBER%20GENERATOR%20(TRNG))
 
 ## IMPLEMENTAZIONI DI PRNG SICURI
 
@@ -81,8 +87,11 @@ F{{E}}
 G[CONTATORE]
 H[SEED]
 K[output]
-H --> G & F 
+H --> G & F
 G --> F --> K
 end
 ```
 
+
+
+ [NEXT](TRASFORMAZIONI.md)

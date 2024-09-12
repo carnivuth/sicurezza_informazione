@@ -1,3 +1,9 @@
+---
+id: COMPLESSITA_COMPUTAZIONALE
+aliases: []
+tags: []
+---
+
 # COMPLESSITÀ COMPUTAZIONALE
 
 Per distinguere algoritmi pesanti da algoritmi leggeri si fa affidamento al concetto di complessità computazionale, definito come l'andamento in funzione dell'input del numero di operazioni necessarie per portare a termine l'algoritmo stesso
@@ -20,3 +26,6 @@ La chiave di volta nel creare funzioni sicure sta nello scegliere parametri che 
 Per far si che le chiavi siano sicure e necessario selezionare una dimensione per cui il problema di ricerca esaustiva diventi Difficile
 
 ![](Pasted%20image%2020240625151801.png)
+
+
+ [NEXT](TRASFORMAZIONI.md)

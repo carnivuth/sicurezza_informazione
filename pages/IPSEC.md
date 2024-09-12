@@ -1,3 +1,10 @@
+---
+id: IPSEC
+aliases: []
+tags: []
+index: 11
+---
+
 # IPSEC
 
 È un servizio di sicurezza a livello di rete che nasce per risolvere alcuni problemi che altrimenti non possono essere risolti:
@@ -12,7 +19,7 @@ I protocolli utilizzati sono i seguenti
 
 - **Authentication Header**: per autenticare pacchetti, garantisce autenticità e integrità.
 
-- **Encapsulating Security Payload**: può essere configurato per garantire solo confidenzialità o anche autenticazione dei pacchetti. 
+- **Encapsulating Security Payload**: può essere configurato per garantire solo confidenzialità o anche autenticazione dei pacchetti.
 
 - **Internet Key Exchange**: negoziare parametri di sicurezza, autenticazione e distribuzione delle chiavi utilizzate.
 
@@ -46,9 +53,9 @@ Servizio per impedire attacchi di replay, si basa sul concetto di finestra a sco
 Una volta stabilita la dimensione della finestra: i nodi comunicanti alla ricezione di un pacchetto lo marcano e controllano la finestra:
 
 - se il pacchetto e gia presente nella finestra viene scartato
-- se il pacchetto non e presente nella finestra viene marcato e inserito nella finestra 
+- se il pacchetto non e presente nella finestra viene marcato e inserito nella finestra
 -  se il pacchetto ha un numero di sequenza inferiore all' ultimo pacchetto in finestra viene scartato
-   
+
 -------------------------------------------------
 
 ### **Trasporto vs Tunnel**
@@ -59,8 +66,8 @@ Se uso la modalità di trasporto vuol dire che se ci sono due nodi terminali com
 
 Mentre nella modalità tunnel si prevede di avere il parchetto originario IP che viene cifrato e incapsulato in un nuovo pacchetto che ha un’intestazione diversa da quello originale, un’intestazione ipsec e tuto questo incapsulato. La si utilizza quando sono interessata ad esempio a nascondere a chi è indirizzato il pacchetto.
 
-  
-  
+
+
 
 A seconda della modalità di incapsulamento adottata possiamo avere dei servizi diversi:
 
@@ -76,8 +83,8 @@ Se voglio autenticazione di tutto il pacchetto orginario e la cifratura di tutto
 
 IPsec, come SSL, per garantire l’autenticazione dell’origine dei dati usa HMAC, stesso meccanismo e motivazione, grande efficienza. Il segreto usato in AH è il segreto che deriva dalla negoziazione del segreto master previsto dal protocollo. ESP cifra e con protocollo di negoziazione potrà decidere i termini. Se ho ESP con autenticazione si ha che IPsec, a differenza di SSL, applica prima la cifratura e poi l’autenticazione. Applico in maniera diversa le trasformazioni, prima cifra e poi autentica.
 
-  
-  
+
+
 
 Campi comuni intestazione
 
@@ -95,3 +102,6 @@ Slide 25
 
 Slide 25
 
+
+
+[PREVIOUS](DIFFIE_HELLMAN.md) [NEXT](SSL.md)

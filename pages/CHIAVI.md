@@ -1,3 +1,10 @@
+---
+id: CHIAVI
+aliases: []
+tags: []
+index: 6
+---
+
 # CHIAVI
 
 Le chiavi sono parametri che consentono di rendere [segrete](TRASFORMAZIONI.md#FUNZIONI%20SEGRETE) le trasformazioni per la sicurezza
@@ -60,7 +67,7 @@ D --dest k--> C
 
 ## RELAZIONI TRA LE CHIAVI
 
-Le chiavi possono essere 
+Le chiavi possono essere
 
 - **simmetriche** chiave della sorgente e della destinazione sono uguali o derivabili
 - **asimmetriche**  chiave della sorgente e della destinazione sono diverse e in questo caso si parla di coppie di chiavi (*e.g. chiave pubblica/privata*)
@@ -97,7 +104,7 @@ F[passphrase]
 H[M]
 I[C]
 end
-F --> A 
+F --> A
 A --> B & C
 D --S-->C
 C --> G
@@ -108,3 +115,6 @@ E -->I
 ```
 
 In questo schema la chiave viene generata per mezzo di un RNG, cifrata per mezzo della hash della passphrase e salvata in memoria, in fase di cifratura questa viene decifrata e utilizzata
+
+
+[PREVIOUS](PROTOCOLLO_WEP.md) [NEXT](CIFRARI_ASIMMETRICI.md)

@@ -1,3 +1,10 @@
+---
+id: RSA
+aliases: []
+tags: []
+index: 8
+---
+
 **# RIVEST–SHAMIR–ADLEMAN (RSA)
 
 cifrario asimmetrico che sfrutta il problema della [fattorizzazione di un numero primo](PROBLEMI_DIFFICILI.md#FATTORIZZAZIONE%20DI%20UN%20NUMERO%20PRIMO).
@@ -86,3 +93,6 @@ questo consente di implementare la cosiddetta **autenticazione ad occhi chiusi**
 - Il destinatario di $m$ può verificare che è autenticato da T: $(c3)^{eT} \mod nT = m$
 
 questa proprietà può essere sfruttata da un attaccante per far firmare messaggi a una destinazione che altrimenti non li firmerebbe
+
+
+[PREVIOUS](CIFRARI_ASIMMETRICI.md) [NEXT](KEY_MANAGEMENT.md)

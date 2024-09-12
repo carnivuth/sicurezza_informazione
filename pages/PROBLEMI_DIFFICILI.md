@@ -1,3 +1,9 @@
+---
+id: PROBLEMI_DIFFICILI
+aliases: []
+tags: []
+---
+
 # PROBLEMI DIFFICILI
 
 Tutti gli algoritmi di cifratura si basano su problemi difficili della teoria dei numeri, qui elencati alcuni esempi interessanti:
@@ -11,3 +17,6 @@ Tutti gli algoritmi di cifratura si basano su problemi difficili della teoria de
 *dato un numero primo $p$ un generatore $g$ e un numero intero $A$ trovare $x$ tale per cui $A = g^x\mod{p}$*
 
 Tale problema ha una complessità sub-esponenziale per $p$ grande
+
+
+ [NEXT](TRASFORMAZIONI.md)

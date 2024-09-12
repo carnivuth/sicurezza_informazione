@@ -1,3 +1,10 @@
+---
+id: KEY_MANAGEMENT
+aliases: []
+tags: []
+index: 9
+---
+
 # MECCANISMO DI DISTRIBUZIONE DELLE CHIAVI
 
 Nei [cifrari simmertrici](CIFRARI_SIMMETRICI.md#CIFRARI%20SIMMETRICI) e fondamentale stabilire come distribuire la chiave agli interessati alla comunicazione, ci sono due modelli di interazione principali
@@ -35,7 +42,7 @@ La chiave di sessione viene generata dal mittente e inviata sul canale insicuro 
 
 ### MASTER KEY E  SCALABILITÀ
 
-Una sola master key condivisa non si presta bene a situazioni con alto numero di utenti dove il numero di chiavi da distribuire scala secondo $N^2$ 
+Una sola master key condivisa non si presta bene a situazioni con alto numero di utenti dove il numero di chiavi da distribuire scala secondo $N^2$
 
 ## KEY DISTRIBUTION CENTER (KDC)
 
@@ -44,9 +51,9 @@ Soluzione che cerca di risolvere il problema di scalabilità della master key in
 
 ```mermaid
 sequenceDiagram
-participant A 
+participant A
 participant KDC
-participant B 
+participant B
 A ->> KDC: RA || A || B
 KDC ->> A: EKA(RA||B||k|| EKB(A||k))
 A ->> B : EKB(A||k)
@@ -66,9 +73,9 @@ L'attaccante non puo risalire a Ka o KB pero puo effettuare attacchi di replay c
 
 ```mermaid
 sequenceDiagram
-participant A 
+participant A
 participant KDC
-participant B 
+participant B
 A ->> KDC: RA || A || B
 KDC ->> A: EKA(RA||B||k|| EKB(A||k))
 A ->> B : EKB(A||k)
@@ -110,13 +117,13 @@ Se il KDC usa ECB come modalità di cifratura simmetrica possiamo ipotizzare che
 ### **Uso del vettore IV**
 
 - CBC, CFB e OFB richiedono un vettore IV ad ogni operazione di cifratura
-    
+
 - IV non deve essere necessariamente segreto
-    
+
 - Per CBC e CFB IV necessariamente imprevedibile
-    
+
 - In OFB IV non deve essere necessariamente imprevedibile ma unico
-    
+
 
 ## **Integrità e confidenzialità**
 
@@ -205,11 +212,11 @@ L’attacco con estensione è possibile:
 Supponiamo di avere rawCBC(k,m). L’intrusore può:
 
 - Scegliere un messaggio di 1 blocco arbitrario m appartenente a X
-    
+
 - Richiedere alla sorgente legittima il tag su m (t==E(k,m))
-    
+
 - Usare t come tag su un mesaggio di due blocchi fatto così: (m, t+m)
-    
+
 
 ![](file:///tmp/lu14493lmg1.tmp/lu14493lmjt_tmp_a16660b2.png)
 
@@ -251,8 +258,8 @@ Copia tutto il pacco di slide
 
 Era il 20 OTTOBRE
 
-  
-  
+
+
 
 ### **A1: Repeated square and multiply**
 
@@ -267,16 +274,19 @@ Riducendo in modulo il risultato di ogni moltiplicazione si riesce ad operare se
 Proprietà notevole di A1 e di A2:
 
 - Sia t il numero di bit della rappresentaizone binaria dell’esponente e
-    
+
 - Sia n il numero di bit dell’esponente on valore 1
-    
+
 - TEMPO DI ESECUZIONE  t+n moltiplicazioni
-    
+
 - TEMPO MEDIO  3/2 t moltiplicazioni
-    
+
 
 **Complessità**
 
 ![](file:///tmp/lu14493lmg1.tmp/lu14493lmjt_tmp_336844d9.png)
 
 Quando utilizziamo gf dobbiamo effettivamente capire come è implementato, se ho algoritmi che rendono più efficiente la sua implementazione. Perché l’operazione modulare non è efficiente anche se ha complessità polinomiale.
+
+
+[PREVIOUS](RSA.md) [NEXT](DIFFIE_HELLMAN.md)

@@ -1,3 +1,10 @@
+---
+id: FUNZIONI_HASH
+aliases: []
+tags: []
+index: 2
+---
+
 # FUNZIONI HASH
 
 Una funzione hash deve presentare le seguenti proprietà:
@@ -50,7 +57,7 @@ In uno scenario dove l'[autenticazione e implementata per mezzo della funzione h
 
 $$ m|H(S|m)$$
 
-In questo caso l'attaccante può sfruttare il fatto che la funzione $f$ e nota e generare un $m^*$ composizione del messaggio originale con un pezzo aggiuntivo a piacere e la funzione hash risultate e 
+In questo caso l'attaccante può sfruttare il fatto che la funzione $f$ e nota e generare un $m^*$ composizione del messaggio originale con un pezzo aggiuntivo a piacere e la funzione hash risultate e
 
 $$f(H(m),m^{'})||H(s|m)$$
 
@@ -97,7 +104,7 @@ Se infatti non valesse la proprieta di resistenza alle collisioni l'attaccante p
 
 Questa proprieta e fondamentale per 2 motivi:
 
-- protocolli che prevedono l'hash di segreti. 
+- protocolli che prevedono l'hash di segreti.
 - impedire a un attaccante con un attacco di forza bruta di generare un messaggio e farlo apparire come firmato legittimamente da una sorgente
 
 ## ALGORITMI DI HASH BASATI SU CI
@@ -123,7 +130,10 @@ Una possibile modalita per attaccare la resistenza debole e il seguente:
 
 - L'attaccante prepara 2 versioni di un contratto $M$ ed $M'$ di cui una e favorevole alla sorgente e l'altra no
 - modifica $M'$ a caso finchè $H(M)= H(M')$
-- la sorgente firma $M$ 
+- la sorgente firma $M$
 - l'attaccante ha una firma valida per $M'$
 
-Per far si che l'attacco riesca, sono necessari $2^{n/2}$ tentativi 
+Per far si che l'attacco riesca, sono necessari $2^{n/2}$ tentativi
+
+
+[PREVIOUS](TRASFORMAZIONI.md) [NEXT](MODALITA_CIFRATURA.md)

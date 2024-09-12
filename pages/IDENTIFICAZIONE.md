@@ -1,6 +1,12 @@
+---
+id: IDENTIFICAZIONE
+aliases: []
+tags: []
+---
+
 # IDENTIFICAZIONE
 
-Esistono applicazioni che richiedono l'anonimato, altre che necessitano dell'anonimato. Nella maggioranza dei casi è però **richiesto che l'erogatore di un servizio conosca l'identità di chi ne usufruisce e che il fruitore sia certo dell'identità dell'erogatore** 
+Esistono applicazioni che richiedono l'anonimato, altre che necessitano dell'anonimato. Nella maggioranza dei casi è però **richiesto che l'erogatore di un servizio conosca l'identità di chi ne usufruisce e che il fruitore sia certo dell'identità dell'erogatore**
 
 Il protocollo di identificazione e una **soluzione real-time** e l'informazione che ne scaturisce ha **validità istantanea**
 
@@ -53,7 +59,7 @@ I protocolli di identificazione possono essere classificati in 2 tipologie:
 
 ## PROTOCOLLO ONE TIME PASSWORD (OTP)
 
-Protocollo basato su una funzione nota $F(x)$ one-way che le due parti conoscono, quando un utente vuole identificarsi invia al server l'output di $F^n(x)$ e a ogni identificazione la funzione scala di un esponente 
+Protocollo basato su una funzione nota $F(x)$ one-way che le due parti conoscono, quando un utente vuole identificarsi invia al server l'output di $F^n(x)$ e a ogni identificazione la funzione scala di un esponente
 
 ```mermaid
 sequenceDiagram
@@ -73,7 +79,7 @@ In questo protocollo il server sfida il client a generare un messaggio che solo 
 
 ```mermaid
 sequenceDiagram
-participant alice 
+participant alice
 participant bob
 bob ->> alice: RB
 alice ->> bob: RA || H(RB|S)
@@ -89,7 +95,7 @@ In questa tipologia di attacco l'utente malevolo apre due sessioni con alice e s
 
 ```mermaid
 sequenceDiagram
-participant alice 
+participant alice
 participant eve
 eve ->> alice: RB
 alice ->> eve: RA || H(RB|S)
@@ -108,3 +114,6 @@ Ci sono diverse soluzioni volte a impedire l'attacco di reflection, tutte si bas
 - **numeri random**: in questa soluzione l'identificatore deve mantenere dello stato temporaneamente fino al termine della sessione
 - **numeri di sequenza**: necessario mantenere lo stato a lungo termine, molto oneroso
 - **timestamp**: necessario accordarsi in maniera sicura su un tempo globale
+
+
+ [NEXT](TRASFORMAZIONI.md)

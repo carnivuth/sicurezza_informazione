@@ -1,3 +1,10 @@
+---
+id: TRASFORMAZIONI
+aliases: []
+tags: []
+index: 1
+---
+
 # TRASFORMAZIONI PER LA SICUREZZA
 
 Per consentire comunicazioni sicure, due soggetti utilizzano metodologie di manipolazione dei dati dette trasformazioni per comunicarli su un canale insicuro, queste possono essere di due tipi:
@@ -126,3 +133,6 @@ Per rendere segreta una funzione si possono sfruttare diversi approcci:
 - segretare un parametro
 
 Segretare un parametro e la scelta vincente in quanto gli algoritmi di cifratura sono complessi e necessitano di essere condivisi dalle due parti e segretare la macchina e estremamente costoso si fa dunque uso di [chiavi](CHIAVI.md)
+
+
+ [NEXT](FUNZIONI_HASH.md)

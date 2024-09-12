@@ -1,3 +1,10 @@
+---
+id: BLOCKCHAIN
+aliases: 
+tags: 
+index: 15
+---
+
 # BLOCKCHAIN
 
 E una infrastruttura dati in modalita append only distribuita in una rete di nodi P2P decentralizzata.
@@ -40,7 +47,7 @@ La verifica della base dati puo essere fatta chiedendo alla maggioranza dei nodi
 
 Il protocollo di inserimento di nuovi dati e una procedura critica che deve essere svolta attraverso un consenso della maggioranza
 
-## ESEMPIO APPLICATIVO: BITCOIN 
+## ESEMPIO APPLICATIVO: BITCOIN
 
 Sistema basato su blockchain per le transazioni economiche anonime fra utenti, ogni nodo mantiene nella sua blockchain le informazioni riguardo le transazioni che sono state convalidate.
 
@@ -85,3 +92,6 @@ Per far funzionare un simile sistema e necessario che il processo di selezione s
 ### PROCESSO DI SELEZIONE: PROOF OF WORK
 
 Nel processo di selezione i nodi che concorrono per inserire il blocco devono risolvere un hash puzzle ovvero **trovare un intero nounce tale per cui l'hash del blocco sia inferiore a un certo valore**
+
+
+[PREVIOUS](PGP.md)

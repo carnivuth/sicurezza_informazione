@@ -1,3 +1,10 @@
+---
+id: DIFFIE_HELLMAN
+aliases: []
+tags: []
+index: 10
+---
+
 # ALGORITMO DIFFIE-HELLMAN (VERSIONE ANONIMA)
 
 Non prevede alcun accordo precedente, attraverso un protocollo crittografico, ogni coppia di utenti è in grado tramite l’esecuzione del protocollo di concordare un segreto (*basato sul calcolo di logaritmi discreti*)
@@ -16,7 +23,7 @@ bob ->> alice: B
 note over alice: K = B^a mod p
 ```
 
-Le due parti arrivano a concordare la stessa chiave sfruttando le proprietà dell' esponenziazione modulare dato che 
+Le due parti arrivano a concordare la stessa chiave sfruttando le proprietà dell' esponenziazione modulare dato che
 
 $$
 \displaylines{
@@ -46,3 +53,6 @@ Con questa soluzione non e garantita l'identificazione delle parti, ma in caso d
 ## VARIANTE EPHEMERAL
 
 In questa variante viene utilizzata la firma digitale per mezzo di chiavi asimmetriche per garantire l' autenticità dei parametri scambiati, che vengono firmati con la suddetta chiave e inviati insieme al certificato della chiave pubblica, anche in questo caso non e possibile verificare l'identita dei mittenti ma **in caso di intrusione gli interlocutori non concordano lo stesso segreto**
+
+
+[PREVIOUS](KEY_MANAGEMENT.md) [NEXT](IPSEC.md)

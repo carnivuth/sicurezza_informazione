@@ -1,3 +1,10 @@
+---
+id: SSL
+aliases: []
+tags: []
+index: 12
+---
+
 # SECURE SOCKET LAYER (SSL)
 
 Soluzione a livello di trasporto per garantire la confidenzialita, l'autenticita e l'integrita tra due host che intendono comunicare
@@ -12,7 +19,7 @@ Nella suite SSL ci sono due protocolli:
 Ha come scopo:
 
 - garantisce che i client stia creando una sessione con il server desiderato (*autenticazione del server*)
-- permette la negoziazione dei parametri di sicurezza da usare per la comunicazione 
+- permette la negoziazione dei parametri di sicurezza da usare per la comunicazione
 
 I parametri negoziati hanno validita per un intera sessione di comunicazione
 
@@ -68,9 +75,9 @@ In questa fase il client ed il server si dicono cosa sanno fare ed il client aut
 In questi messaggi le informazioni sono le seguenti:
 
 - Versione SSL: client e server devono essere compatibili
-    
+
 - Random: client e server generano quantità random diverse per evitare reply;
-    
+
 - ID di sessione: in base al valore viene creata una nuova connessione in una sessione esistente, vengono rinegoziati i parametri di una connessione esistente. Inoltre dico in ordine di preferenza gli algoritmi di cifratura e id hash che il client è in grado di supportare, dato che client e server sono in grado di scambiarsi messaggi sicuri sse gli algoritmi (di cifratura, di hash, per concordare la chiave) sono compatibili. Il server andrà a verificare cosa è in grado di fare e restituirà al client l’identificatore della sessione e il sottoinsieme di algoritmi che ha selezionato in ordine di preferenza.
 
 Questi due messaggi hanno l’obiettivo di concordare quali meccanismi verranno utilizzati.
@@ -93,3 +100,6 @@ A seconda della modalita di cifratura i peer si scambiano parametri diversi:
  Alla fine del protocollo di negoziazione i peer concordano un master secret che verra utilizzato all'interno di una stessa sessione per le comunicazioni, dal master secret si derivano le chiavi utilizzate per ogni connessione
 
 SSL non garantisce il non ripudio dei messaggi  ma solo l'autenticazione del server (*client opzionale*)
+
+
+[PREVIOUS](IPSEC.md) [NEXT](KERBEROS.md)

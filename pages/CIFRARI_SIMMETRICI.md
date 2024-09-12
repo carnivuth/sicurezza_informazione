@@ -1,9 +1,16 @@
+---
+id: CIFRARI_SIMMETRICI
+aliases: []
+tags: []
+index: 4
+---
+
 # CIFRARI SIMMETRICI
 
 Cifrari che si basano su algoritmi simmetrici (*e.g. [chiavi simmetriche](CHIAVI.md#CHIAVI%20SIMMETRICHE)*). Nella costruzione dei cifrari simmetrici si seguono due principi fondamentali:
 
 - **principio di Kerckof**: la sicurezza deve dipendere dalla chiave e non dall'algoritmo
-  
+
 - **confusione**: il messaggio cifrato non deve fornire informazioni sulla chiave (*es lunghezza*)
 
 - **diffusione**: la modifica di un solo carattere nel messaggio in chiaro deve provocare una modifica sostanziale del messaggio cifrato
@@ -65,7 +72,7 @@ K[next state]
 L[Register]
 I[F]
 J{{xor}}
-F --> I & K 
+F --> I & K
 L --> K --> L
 L --> I
 G --> J
@@ -121,7 +128,7 @@ A --> D
 B --> E
 D --ki--> E
 E --> C
-M --> D 
+M --> D
 C --> M
 end
 CIFRATURA <--sincronismo --> DECIFRATURA
@@ -129,7 +136,7 @@ CIFRATURA <--sincronismo --> DECIFRATURA
 
 ## CONFRONTO
 
-Per entrambi i cifrari non e possibile un attacco passivo, a patto di utilizzare PRNG sicuri, tuttavia sono vulnerabili ad attacchi attivi, 
+Per entrambi i cifrari non e possibile un attacco passivo, a patto di utilizzare PRNG sicuri, tuttavia sono vulnerabili ad attacchi attivi,
 
 Sono però vulnerabili ad attacchi attivi. Se il flusso dei dati viene alterato è impossibile effettuare una decifrazione corretta. Ci chiediamo quali sono gli effetti a seguito di un attacco cattivo nei tre casi: cancellazione, modifica di un bit testo cifrato o inserimento di un bit.
 
@@ -221,3 +228,6 @@ Una delle prime implementazioni della rete di Festel e DES, prevede 16 iterazion
 
 Algoritmo di cifratura a blocchi standard del settore, utilizza operazioni di sostituzione e trasposizione ma non si rifa alla rete di festel
 
+
+
+[PREVIOUS](MODALITA_CIFRATURA.md) [NEXT](PROTOCOLLO_WEP.md)

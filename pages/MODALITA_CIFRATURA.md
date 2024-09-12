@@ -1,3 +1,10 @@
+---
+id: MODALITA_CIFRATURA
+aliases: []
+tags: []
+index: 3
+---
+
 # MODALITÀ DI CIFRATURA
 
 Esistono diverse modalità per l'implementazione di cifrari a blocchi:
@@ -25,10 +32,10 @@ B[m1]
 C[m2]
 D[m3]
 end
-A --> E 
-B --> E 
-C --> F 
-D --> G 
+A --> E
+B --> E
+C --> F
+D --> G
 subgraph cipher_stage
 direction LR
 subgraph block_1
@@ -61,7 +68,7 @@ end
 ```
 
 
-CBC fa utilizzo di un vettore di inizializzazione per impedire la ripetizione di blocchi cifrati, il vettore $IV$ deve essere usato una sola volta, deve essere casuale e imprevedibile (*proprietà di un [PRNG sicuro](Note%20Domande.md#PRNG%20crittograficamente%20sicuri)*) 
+CBC fa utilizzo di un vettore di inizializzazione per impedire la ripetizione di blocchi cifrati, il vettore $IV$ deve essere usato una sola volta, deve essere casuale e imprevedibile (*proprietà di un [PRNG sicuro](Note%20Domande.md#PRNG%20crittograficamente%20sicuri)*)
 
 ### ECB VS CBC
 
@@ -72,7 +79,7 @@ CBC fa utilizzo di un vettore di inizializzazione per impedire la ripetizione di
 | no propagazione dell'errore | propagazione dell'errore                                        |
 | no vettori di init $IV$     | necessario un vettore di init $IV$ noto a entrambe le parti     |
 
-## CIPHER FEEDBACK (CFB) 
+## CIPHER FEEDBACK (CFB)
 
 Modalità di cifratura che si rifa ai [cifrari a flusso autosincronizzanti](CIFRARI_SIMMETRICI.md#CIFRARI%20A%20FLUSSO) con l'utilizzo di un vettore $IV$  molto adatta alla comunicazione di flussi di dati.
 Il flusso di chiave viene ottenuto per mezzo di uno shift register (inizializzato per mezzo di $IV$) che viene cifrato con la chiave concordata
@@ -95,7 +102,7 @@ Sfrutta l'uso scorretto del vettore di inizializzazione $IV$, nelle implementazi
 
 L'attaccante deve essere in grado di prevedere il valore del vettore e iniettare un flusso dati nel mezzo di una comunicazione avviata (*man in the middle*)
 
-In una sessione di comunicazione SSL le due parti negoziano una serie di parametri tra cui la modalità di cifratura della comunicazione, se CBC viene scelta dalle due parti il messaggio viene suddiviso in blocchi e a ognuno di questi viene applicata la cifratura CBC. 
+In una sessione di comunicazione SSL le due parti negoziano una serie di parametri tra cui la modalità di cifratura della comunicazione, se CBC viene scelta dalle due parti il messaggio viene suddiviso in blocchi e a ognuno di questi viene applicata la cifratura CBC.
 
 Il vettore $IV$ viene scelto essere il residuo della cifratura CBC del pacchetto precedente, rendendo cosi **deducibile il vettore $IV$** per mezzo di osservazione delle comunicazioni.
 
@@ -104,7 +111,7 @@ L'attacco si svolge cosi, supponiamo che l'attaccante voglia sapere con chi sta 
 - ascolta il canale
 - e interessato a verificare se al passo $N$ di CBC il testo in chiaro e un determinato valore $m$
 - al passo $N+1$ inietta nel canale un blocco residuo $$m \oplus K_1 \oplus K \oplus K_1$$ dove $K,K_1$ sono i residui CBC del passo $N,N+1$
--  per le proprietà dello xor l'attaccante **sa se il messaggio inviato al passo $N$ dalla sorgente e effettivamente quello ipotizzato** 
+-  per le proprietà dello xor l'attaccante **sa se il messaggio inviato al passo $N$ dalla sorgente e effettivamente quello ipotizzato**
 
 ### BIRTHDAY ATTACKS 64-BIT CIPHER BLOCKS
 
@@ -120,3 +127,6 @@ m_i \oplus m_j = c_i \oplus c_j
 $$
 
 Per evitare questa vulnerabilità la chiave deve essere cambiata dopo  $2^{\frac{N}{2}}$
+
+
+[PREVIOUS](FUNZIONI_HASH.md) [NEXT](CIFRARI_SIMMETRICI.md)

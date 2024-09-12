@@ -1,10 +1,16 @@
+---
+id: PROTOCOLLI
+aliases: []
+tags: []
+---
+
 # PROTOCOLLI PER LA SICUREZZA
 
 Esistono diversi protocolli generati dalla combinazione delle [trasformazioni](TRASFORMAZIONI.md) base a seconda delle proprietà che si vogliono garantire:
 
 ## FIRMA DIGITALE
 
-Esempio di utilizzo della funzione $S$, in cui la sorgente deve dimostrare che il messaggio inviato proviene da essa stessa, la sorgente invia alla destinazione 
+Esempio di utilizzo della funzione $S$, in cui la sorgente deve dimostrare che il messaggio inviato proviene da essa stessa, la sorgente invia alla destinazione
 
 $$C = S(H(M))$$
 
@@ -51,7 +57,7 @@ end
 A --S--> B
 E --S--> G
 G --> D
-A --M--> G & E 
+A --M--> G & E
 B --> F
 F & D--> C
 C --risultato--> E
@@ -81,3 +87,6 @@ c= E(m)|H(E(m)|s) \space (es. \space IPSEC) \\
 $$
 
 In questo modo la destinazione può autenticare un messaggio prima di decifrarlo, tuttavia e necessario che la funzione $H$ sia sicura per impedire all'attaccante di risalire al segreto
+
+
+ [NEXT](TRASFORMAZIONI.md)

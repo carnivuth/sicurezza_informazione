@@ -1,3 +1,10 @@
+---
+id: PGP
+aliases: []
+tags: []
+index: 14
+---
+
 # PRETTY GOOD PRIVACY (PGP)
 
 Protocollo di sicurezza pensato per scambiare documenti in modo sicuro (*email e file storage*), compatibile con differenti sistemi di messaggistica email, fornisce anche servizi di autenticazione per mezzo di meccanismi di [firma digitale](PROTOCOLLI.md#FIRMA%20DIGITALE).
@@ -6,11 +13,11 @@ Protocollo di sicurezza pensato per scambiare documenti in modo sicuro (*email e
 
 per lo scambio di informazioni viene applicato un [cifrario ibrido](CIFRARI_ASIMMETRICI.md#CIFRARIO%20IBRIDO) con [RSA](RSA.md), i messaggi scambiati contengono il testo cifrato, la chiave k  per la cifratura simmetrica che a sua volta viene cifrata con la chiave pubblica della destinazione.
 
-## AUTENTICAZIONE 
+## AUTENTICAZIONE
 
 L'autenticazione si basa su hashing e signing di messaggi
 
-## CIFRATURA 
+## CIFRATURA
 
 la cifratura simmetrica avviene per mezzo del [CFB](MODALITA_CIFRATURA.md#CIPHER%20FEEDBACK%20(CFB)).
 
@@ -28,13 +35,16 @@ PGP non prevede nessuna entita centralizzata per l'autenticazione, invece ogni u
 
 Le chiavi pubbliche possono essere ottenute:
 
-- dal possessore della chiave stessa 
+- dal possessore della chiave stessa
 - da un intermediario
 
 A ogni chiave e associato un livello di fiducia che puo dipendere:
 
 - dal canale di comunicazione in cui la chiave e stata scambiata
-- dal possessore 
+- dal possessore
 - dall'intermediario che ha fornito la chiave
 
 E previsto inoltre un meccanismo di fiducia anche per i certificati mostrati dagli intermediari.
+
+
+[PREVIOUS](KERBEROS.md) [NEXT](BLOCKCHAIN.md)

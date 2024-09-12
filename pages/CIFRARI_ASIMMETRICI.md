@@ -1,3 +1,10 @@
+---
+id: CIFRARI_ASIMMETRICI
+aliases: []
+tags: []
+index: 7
+---
+
 # CIFRARI ASIMMETRICI
 
 In un cifrario asimmetrico le due entità posseggono entrambe una coppia di chiavi (*pubblica e privata*), possono essere utilizzati per garantire la confidenzialità (*cifrando con la pubkey del destinatario*) o l'autenticazione, (*cifrando con la privkey del mittente*).
@@ -28,3 +35,6 @@ note over bob: M = DK(C2)
 ```
 
 La sorgente sfrutta la chiave pubblica di bob per comunicare la chiave di sessione per effettuare poi una comunicazione per mezzo di [cifrari simmetrici](CIFRARI_SIMMETRICI.md#CIFRARI%20SIMMETRICI), l'algoritmo simmetrico viene scelto dalla sorgente
+
+
+[PREVIOUS](CHIAVI.md) [NEXT](RSA.md)
