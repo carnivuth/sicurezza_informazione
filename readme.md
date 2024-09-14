@@ -10,6 +10,10 @@ Note personali sul corso di sicurezza dell'informazione tenuto dalla professores
 
 E possibile usare la repository senza obisdian (sono dei file markdown)
 
+## WEBSITE
+
+La repository e pubblicata come [sito web](https://carnivuth.github.io/sicurezza_informazione/)per un accesso facile dal browser
+
 ## STRUTTURA REPOSITORY
 
 Gli argomenti sono divisi per macro categorie, e presente una mappa riassuntiva per ogni capitolo
