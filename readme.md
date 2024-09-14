@@ -12,7 +12,7 @@ E possibile usare la repository senza obisdian (sono dei file markdown)
 
 ## WEBSITE
 
-La repository e pubblicata come [sito web](https://carnivuth.github.io/sicurezza_informazione/)per un accesso facile dal browser
+La repository e pubblicata come [sito web](https://carnivuth.github.io/sicurezza_informazione/) per un accesso facile dal browser
 
 ## STRUTTURA REPOSITORY
 
